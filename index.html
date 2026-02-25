@@ -7,51 +7,206 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- 星空背景 -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+    
+    <!-- 机器人装饰 -->
+    <div class="robot-decoration robot-left">
+        <svg viewBox="0 0 100 100" class="robot-svg">
+            <circle cx="50" cy="30" r="20" fill="none" stroke="#00d4ff" stroke-width="2"/>
+            <circle cx="42" cy="28" r="3" fill="#00d4ff" class="robot-eye left"/>
+            <circle cx="58" cy="28" r="3" fill="#00d4ff" class="robot-eye right"/>
+            <rect x="35" y="50" width="30" height="40" rx="5" fill="none" stroke="#00d4ff" stroke-width="2"/>
+            <line x1="20" y1="60" x2="35" y2="55" stroke="#00d4ff" stroke-width="2"/>
+            <line x1="80" y1="60" x2="65" y2="55" stroke="#00d4ff" stroke-width="2"/>
+            <rect x="40" y="60" width="20" height="15" fill="none" stroke="#ff00ff" stroke-width="1"/>
+        </svg>
+    </div>
+    
+    <div class="robot-decoration robot-right">
+        <svg viewBox="0 0 100 100" class="robot-svg">
+            <circle cx="50" cy="30" r="20" fill="none" stroke="#ff00ff" stroke-width="2"/>
+            <circle cx="42" cy="28" r="3" fill="#ff00ff" class="robot-eye left"/>
+            <circle cx="58" cy="28" r="3" fill="#ff00ff" class="robot-eye right"/>
+            <rect x="35" y="50" width="30" height="40" rx="5" fill="none" stroke="#ff00ff" stroke-width="2"/>
+            <line x1="20" y1="60" x2="35" y2="55" stroke="#ff00ff" stroke-width="2"/>
+            <line x1="80" y1="60" x2="65" y2="55" stroke="#ff00ff" stroke-width="2"/>
+            <circle cx="50" cy="67" r="8" fill="none" stroke="#00d4ff" stroke-width="1"/>
+        </svg>
+    </div>
+
     <div class="container">
-        <header>
-            <h1 class="logo">Niuverse</h1>
-            <p class="tagline">ruziniuuuuu 的个人项目空间</p>
+        <!-- 轨道装饰 -->
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="orbit orbit-3"></div>
+        
+        <header class="hero">
+            <div class="planet"></div>
+            <h1 class="glitch" data-text="NIUVERSE">NIUVERSE</h1>
+            <p class="tagline">
+                <span class="typing">ruziniuuuuu 的银河项目基地</span>
+                <span class="cursor">|</span>
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="42">0</span>
+                    <span class="stat-label">项目</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="128">0</span>
+                    <span class="stat-label">星标</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="365">0</span>
+                    <span class="stat-label">天数</span>
+                </div>
+            </div>
         </header>
 
         <main>
-            <section class="about">
-                <h2>关于</h2>
-                <p>这里是 ruziniuuuuu 的个人项目展示网站。Niuverse 是我记录创意、分享作品的地方。</p>
+            <section class="about hologram">
+                <div class="hologram-frame">
+                    <div class="scan-line"></div>
+                    <h2>
+                        <span class="icon">◈</span>
+                        系统概览
+                        <span class="icon">◈</span>
+                    </h2>
+                    <p>欢迎来到 Niuverse —— 一个漂浮在数字银河中的创意空间站。这里记录着 ruziniuuuuu 在代码宇宙中的探索轨迹。</p>
+                    <div class="tech-tags">
+                        <span class="tag">AI</span>
+                        <span class="tag">机器人</span>
+                        <span class="tag">银河</span>
+                        <span class="tag">探索</span>
+                    </div>
+                </div>
             </section>
 
             <section class="projects">
-                <h2>项目</h2>
-                <div class="project-list">
-                    <div class="project-card">
-                        <h3>项目一</h3>
-                        <p>项目描述...</p>
-                        <a href="#" class="btn">查看详情</a>
+                <h2>
+                    <span class="orbit-icon">◉</span>
+                    项目轨道
+                    <span class="orbit-icon">◉</span>
+                </h2>
+                <div class="project-grid">
+                    <div class="project-card" data-project="1">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="project-icon">🤖</div>
+                            <h3>Project Alpha</h3>
+                            <p class="project-desc">智能机器人控制系统，融合深度学习与实时决策</p>
+                            <div class="project-meta">
+                                <span class="lang">Python</span>
+                                <span class="stars">⭐ 24</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn-glow">访问</a>
+                                <a href="#" class="btn-outline">源码</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-card">
-                        <h3>项目二</h3>
-                        <p>项目描述...</p>
-                        <a href="#" class="btn">查看详情</a>
+                    
+                    <div class="project-card" data-project="2">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="project-icon">🌌</div>
+                            <h3>Nebula Map</h3>
+                            <p class="project-desc">交互式星云地图可视化，探索银河系的奥秘</p>
+                            <div class="project-meta">
+                                <span class="lang">Three.js</span>
+                                <span class="stars">⭐ 18</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn-glow">访问</a>
+                                <a href="#" class="btn-outline">源码</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-card">
-                        <h3>项目三</h3>
-                        <p>项目描述...</p>
-                        <a href="#" class="btn">查看详情</a>
+                    
+                    <div class="project-card" data-project="3">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="project-icon">⚡</div>
+                            <h3>Quantum Link</h3>
+                            <p class="project-desc">量子加密通信协议，构建安全的星际网络</p>
+                            <div class="project-meta">
+                                <span class="lang">Rust</span>
+                                <span class="stars">⭐ 31</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn-glow">访问</a>
+                                <a href="#" class="btn-outline">源码</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="terminal">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="terminal-btn close"></span>
+                        <span class="terminal-btn minimize"></span>
+                        <span class="terminal-btn maximize"></span>
+                        <span class="terminal-title">ruziniuuuuu@niuverse:~</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">whoami</span>
+                        </div>
+                        <div class="terminal-line output">
+                            ruziniuuuuu - 银河探索者 | 机器人工程师 | 创意开发者
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">ls -la interests/</span>
+                        </div>
+                        <div class="terminal-line output">
+                            AI/  Robotics/  Space/  Code/  Design/
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command typing-cursor">_</span>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section class="links">
-                <h2>链接</h2>
-                <div class="social-links">
-                    <a href="https://github.com/niuverse" target="_blank" class="link-btn">GitHub</a>
-                    <a href="mailto:your@email.com" class="link-btn">邮箱</a>
+                <h2>
+                    <span class="signal-icon">◉</span>
+                    通讯频道
+                    <span class="signal-icon">◉</span>
+                </h2>
+                <div class="link-constellation">
+                    <a href="https://github.com/niuverse" class="link-node" data-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="mailto:your@email.com" class="link-node" data-label="Email">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </a>
+                    <a href="#" class="link-node" data-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
                 </div>
             </section>
         </main>
 
         <footer>
-            <p>&copy; 2026 ruziniuuuuu. All rights reserved.</p>
+            <div class="footer-line"></div>
+            <p class="footer-text">
+                <span class="pulse">◉</span>
+                Niuverse Station Online
+                <span class="pulse">◉</span>
+            </p>
+            <p class="copyright">© 2026 ruziniuuuuu | 运行于银河边缘</p>
         </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
